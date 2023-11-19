@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model User
+<div class="text-center">
+    <form action="/user/create" method="POST">
+        <div>
+            @* Tag para poder validar directamente con asp, es el asp-for y para mostrar el mensaje se crea el span con asp-validation-for, pero falta algo mas para que esto funcione *@
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name">
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div>
+            <label asp-for="Lastname">Lastname</label>
+            <input asp-for="Lastname">
+            <span asp-validation-for="Lastname"></span>
+        </div>
+        <div>
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email">
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <label asp-for="Password">Password</label>
+            <input asp-for="Password">
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div>
+            <label asp-for="Date">Date</label>
+            <input asp-for="Date">
+            <span asp-validation-for="Date"></span>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
